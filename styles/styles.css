@@ -1,13 +1,16 @@
 .bg-back{
-      background-color: #ed502e;
+      background-color: #ed502e !important;
  }
  .bg-mult{
-      color: #000 ;
+      color: #000 !important;
  }
  .get{
       height: 50px;
       width: 150px;
  }
+ .box{
+      height:500px;
+ }
  .bg-white{
-background-color: #ffffff;;
+background-color: #ffffff !important;
  }
