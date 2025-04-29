@@ -44,3 +44,6 @@ background-color: #ffffff !important;
      .bi-check2-circle::before{
           content: "\f270";
      }
+     .card:hover{
+          background-color: #ed502e;
+     }
