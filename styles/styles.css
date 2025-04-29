@@ -1,6 +1,9 @@
 .bg-back{
       background-color: #ed502e !important;
  }
+ .bg-org{
+     color: #ed502e !important;
+}
  .bg-mult{
       color: #000 !important;
  }
@@ -14,3 +17,30 @@
  .bg-white{
 background-color: #ffffff !important;
  }
+ .about1::after{
+     width: 100px;
+     height: 2px;
+     background-color:#ed502e;
+     content: "";
+     display: inline-block;
+     margin-left: 5px;
+     }
+     .font{
+          font-size: 14px;
+     }
+     .fontlearn{
+          font-size: 28px;
+     }
+     .bi::before{
+    display: inline-block;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: -.125em;
+    -webkit-font-smoothing: antialiased;
+     }
+     .bi-check2-circle::before{
+          content: "\f270";
+     }
