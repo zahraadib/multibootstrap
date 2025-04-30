@@ -68,3 +68,10 @@ margin-top: 100px;
    .fontsize{
      font-size: 15px;
    }
+   .bi-emoji-smile::before{
+     content: "\f327";
+   }
+   .boxx{
+
+     box-sizing: border-box;
+   }
