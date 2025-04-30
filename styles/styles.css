@@ -75,3 +75,10 @@ margin-top: 100px;
 
      box-sizing: border-box;
    }
+   .hoov:hover{
+     background-color: #ffffff !important;
+     color:#ed502e;
+   }
+   .hovertext:hover{
+     color:#ffffff
+   }
