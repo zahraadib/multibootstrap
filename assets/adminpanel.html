@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>calculate</title>
+<link rel="stylesheet" href="../styles/styles.css">
+            <link href="../boots/css/bootstrap.min.css" rel="stylesheet">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+</head>
+<body>
+
+<div class="calculator border-3 d-flex flex-column align-items-center p-3 margiin">
+       <h3 class="bg-org">calculate</h3>
+  <input class="border-3" type="text" id="display" readonly>
+ 
+  <div>
+    <button class="bg-back" onclick="appendNumber('1')">1</button>
+    <button class="bg-back"  onclick="appendNumber('2')">2</button>
+    <button class="bg-back"  onclick="appendNumber('3')">3</button>
+    <button class="bg-back"  onclick="appendOperator('/')">/</button>
+  </div>
+  <div>
+    <button class="bg-back"  onclick="appendNumber('4')">4</button>
+    <button class="bg-back"  onclick="appendNumber('5')">5</button>
+    <button class="bg-back"  onclick="appendNumber('6')">6</button>
+    <button class="bg-back"  onclick="appendOperator('*')">*</button>
+  </div>
+  <div>
+    <button class="bg-back" onclick="appendNumber('7')">7</button>
+    <button class="bg-back"  onclick="appendNumber('8')">8</button>
+    <button class="bg-back"  onclick="appendNumber('9')">9</button>
+    <button class="bg-back"  onclick="appendOperator('-')">-</button>
+  </div>
+  <div>
+    <button class="bg-back"  onclick="appendNumber('0')">0</button>
+    <button class="bg-back"  onclick="appendDecimal('.')">.</button>
+    <button class="bg-back"  onclick="calculate()">=</button>
+    <button class="bg-back"  onclick="appendOperator('+')">+</button>
+  </div>
+  <button class="bg-back" onclick="clearDisplay()">C</button>
+</div>
+
+
+<script>
+let display = document.getElementById('display');
+let currentInput = '';
+
+function appendNumber(num) {
+  currentInput += num;
+  display.value = currentInput;
+}
+
+function appendOperator(op) {
+  currentInput += op;
+  display.value = currentInput;
+}
+
+function appendDecimal(dec) {
+    if (!currentInput.includes('.')) {
+        currentInput += dec;
+        display.value = currentInput;
+    }
+}
+
+function calculate() {
+  try {
+    display.value = eval(currentInput);
+    currentInput = display.value;
+  } catch (error) {
+    display.value = "eror";
+  }
+}
+
+function clearDisplay() {
+  currentInput = '';
+  display.value = '';
+}
+</script>
+
+</body>
+</html>
